@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin: 0;padding: 0;align-items: center;justify-content: center;display:flex;height: 100vh;">
+    <div style="width:420px;padding:35px;border-radius: 20px;background-color: white;box-shadow:0 100px 90px rgba(3,236,19,0.25);display:flex;flex-direction:column;align-items: center;justify-content: center;">
+        <h1 style="text-align: center;">🎓 Student Result Calculator</h1>
+        <form onsubmit="calculate(); return false;" style="display:flex;flex-direction:column;align-items:center;">
+           <br> <input id="name" type="text" placeholder="Student Name"> </br>
+           <br> <input id="mark1" type="number" placeholder="Subject 1 Mark"> </br>
+           <br> <input id="mark2" type="number" placeholder="Subject 2 Mark"> </br>
+           <br> <input id="mark3" type="number" placeholder="Subject 3 Mark"> </br>
+           <br> <button type="submit" style="background-color:lightgreen;border-radius:100px;">Calculate Result</button> </br>
+        <h3 id="result"></h3>
+        </form>
+    </div>
+    <script>
+        function calculate(){
+            //receive first text box value
+            let name=document.getElementById("name").value;
+            let mark1=document.getElementById("mark1").value;
+            let mark2=document.getElementById("mark2").value;
+            let mark3=document.getElementById("mark3").value;
+            //combine all values into one output instead of overwriting
+            document.getElementById("result").innerHTML=
+                name + ": " + mark1 + ", " + mark2 + ", " + mark3;
+        }
+    </script>
+</body>
+</html>

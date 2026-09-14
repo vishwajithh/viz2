@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Digital Clock</h2>
+    <div id="Clock"></div>
+    <script>
+        function showtime(){
+            let time=new Date();
+            let h=time.getHours();
+            let m=time.getMinutes();
+            let s=time.getSeconds();
+            document.getElementById("clock").innerHTML=h + ":" + m + ":" +  s;
+
+        }
+    </script>
+</body>
+</html>
